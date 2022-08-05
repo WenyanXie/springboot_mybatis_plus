@@ -51,5 +51,6 @@ public class Generator {
         autoGenerator.execute();
         System.out.println("hello");
         System.out.println("hello dev");
+        System.out.println("hello master");
     }
 }
