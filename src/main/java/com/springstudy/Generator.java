@@ -49,5 +49,6 @@ public class Generator {
         autoGenerator.setStrategy(strategyConfig);
 
         autoGenerator.execute();
+        System.out.println("hello");
     }
 }
