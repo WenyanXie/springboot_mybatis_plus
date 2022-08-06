@@ -53,5 +53,6 @@ public class Generator {
         System.out.println("hello dev");
         System.out.println("hello master");
         System.out.println("hello dev 2");
+        System.out.println("hello push");
     }
 }
