@@ -16,36 +16,36 @@ import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 public class Generator {
     public static void main(String[] args) {
         AutoGenerator autoGenerator = new AutoGenerator();
-//        数据源相关配置
+        //        数据源相关配置
         DataSourceConfig dataSource = new DataSourceConfig();
         dataSource.setDriverName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/db1");
         dataSource.setUsername("root");
         dataSource.setPassword("123456");
         autoGenerator.setDataSource(dataSource);
-//        设置全局配置
+        //        设置全局配置
         GlobalConfig globalConfig = new GlobalConfig();
         globalConfig.setOutputDir("E:\\idea_java_project\\springboot_mybatis_plus\\src\\main\\java");
         globalConfig.setOpen(false);
         globalConfig.setAuthor("xiewenyan");
         globalConfig.setFileOverride(true);
-//        globalConfig.setMapperName("%Dao");
+        //        globalConfig.setMapperName("%Dao");
         globalConfig.setIdType(IdType.ASSIGN_ID);
         autoGenerator.setGlobalConfig(globalConfig);
-//        包相关配置
+        //        包相关配置
         PackageConfig packageConfig = new PackageConfig();
         packageConfig.setParent("com.springstudy");
         packageConfig.setEntity("domain");
-//        packageConfig.setMapper("dao");
+        //        packageConfig.setMapper("dao");
         autoGenerator.setPackageInfo(packageConfig);
-//        策略配置
+        //        策略配置
         StrategyConfig strategyConfig = new StrategyConfig();
-        strategyConfig.setInclude("tb_user","tb_book");
+        strategyConfig.setInclude("tb_user", "tb_book");
         strategyConfig.setTablePrefix("tb_");
         strategyConfig.setRestControllerStyle(true);
         strategyConfig.setEntityLombokModel(true);
-//        strategyConfig.setLogicDeleteFieldName("deleted");
-//        strategyConfig.setVersionFieldName("version");
+        //        strategyConfig.setLogicDeleteFieldName("deleted");
+        //        strategyConfig.setVersionFieldName("version");
         autoGenerator.setStrategy(strategyConfig);
 
         autoGenerator.execute();
@@ -54,6 +54,8 @@ public class Generator {
         System.out.println("hello master");
         System.out.println("hello dev 2");
         System.out.println("hello push");
-         System.out.println("hello pull");
+        System.out.println("hello pull");
+        System.out.println("Gitee pull");
+
     }
 }
