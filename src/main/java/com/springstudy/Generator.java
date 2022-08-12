@@ -40,8 +40,8 @@ public class Generator {
         autoGenerator.setPackageInfo(packageConfig);
         //        策略配置
         StrategyConfig strategyConfig = new StrategyConfig();
-        strategyConfig.setInclude("tb_user", "tb_book");
-        strategyConfig.setTablePrefix("tb_");
+        strategyConfig.setInclude("sys_relation_value");
+//        strategyConfig.setTablePrefix("tb_");
         strategyConfig.setRestControllerStyle(true);
         strategyConfig.setEntityLombokModel(true);
         //        strategyConfig.setLogicDeleteFieldName("deleted");
