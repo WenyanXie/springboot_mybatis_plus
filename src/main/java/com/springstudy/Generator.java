@@ -40,7 +40,7 @@ public class Generator {
         autoGenerator.setPackageInfo(packageConfig);
         //        策略配置
         StrategyConfig strategyConfig = new StrategyConfig();
-        strategyConfig.setInclude("mushroom_base","mushroom_collection","mushroom_shed_lease","mushroom_shep","mushroom_shep_rent");
+        strategyConfig.setInclude("recruit_worker","recruit_user_address");
 //        strategyConfig.setTablePrefix("tb_");
         strategyConfig.setRestControllerStyle(true);
         strategyConfig.setEntityLombokModel(true);
