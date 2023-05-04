@@ -40,7 +40,7 @@ public class Generator {
         autoGenerator.setPackageInfo(packageConfig);
         //        策略配置
         StrategyConfig strategyConfig = new StrategyConfig();
-        strategyConfig.setInclude("activity_management", "activity_register");
+        strategyConfig.setInclude("trace_tag_trade_statistics");
 //        strategyConfig.setTablePrefix("tb_");
         strategyConfig.setRestControllerStyle(true);
         strategyConfig.setEntityLombokModel(true);

@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- * 执行标准 前端控制器
+ * 溯源交易统计表 前端控制器
  * </p>
  *
  * @author xiewenyan
- * @since 2023-04-04
+ * @since 2023-04-25
  */
 @RestController
-@RequestMapping("/store_execution_standard")
-public class Store_execution_standardController {
+@RequestMapping("/trace_tag_trade_statistics")
+public class Trace_tag_trade_statisticsController {
 
 }
 

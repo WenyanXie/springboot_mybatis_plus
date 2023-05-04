@@ -1,5 +1,6 @@
 package com.springstudy.domain;
 
+import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -9,43 +10,63 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 执行标准
+ * 溯源交易统计表
  * </p>
  *
  * @author xiewenyan
- * @since 2023-04-04
+ * @since 2023-04-25
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class Store_execution_standard implements Serializable {
+public class Trace_tag_trade_statistics implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 执行标准id
+     * 溯源交易统计id
      */
     @TableId(value = "id", type = IdType.ASSIGN_ID)
     private Long id;
 
     /**
-     * 商品id
+     * 申请编号
      */
-    private Long product_id;
+    private String trace_number;
 
     /**
-     * 执行标准（配字典表）
+     * 申请企业
      */
-    private String standar_code;
+    private String company_name;
 
     /**
-     * 分类（配字典表）
+     * 企业id
      */
-    private String sort_code;
+    private Long company_id;
 
     /**
-     * 等级（1特级 ，2一级，3二级，4三级）（配字典表）
+     * 产品名称
      */
-    private String level_code;
+    private String product_name;
+
+    /**
+     * 数量
+     */
+    private Integer num;
+
+    /**
+     * 单价
+     */
+    private BigDecimal unit_price;
+
+    /**
+     * 总价
+     */
+    private BigDecimal total_price;
+
+    /**
+     * 状态（1已同步，2未同步）
+     */
+    private Integer status;
 
     /**
      * 创建时间
