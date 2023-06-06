@@ -1,5 +1,6 @@
 package com.springstudy;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
 import com.baomidou.mybatisplus.generator.config.GlobalConfig;
@@ -29,10 +30,10 @@ public class Generator {
         globalConfig.setAuthor("xiewenyan");
         globalConfig.setFileOverride(true);
         globalConfig.setEntityName("%sDO");
-        globalConfig.setServiceName("%sRepository");
+        globalConfig.setServiceName("I%sRepository");
         globalConfig.setServiceImplName("%sRepositoryImpl");
         // globalConfig.setMapperName("%sDao");
-        //globalConfig.setIdType(IdType.ASSIGN_ID);
+        globalConfig.setIdType(IdType.ASSIGN_ID);
         autoGenerator.setGlobalConfig(globalConfig);
         //包相关配置
         PackageConfig packageConfig = new PackageConfig();
@@ -42,7 +43,7 @@ public class Generator {
         autoGenerator.setPackageInfo(packageConfig);
         // 策略配置
         StrategyConfig strategyConfig = new StrategyConfig();
-        strategyConfig.setInclude("store_order_split_take_address");
+        strategyConfig.setInclude("financial_statistics");
         // strategyConfig.setTablePrefix("tb_");
         strategyConfig.setRestControllerStyle(true);
         strategyConfig.setEntityLombokModel(true);
