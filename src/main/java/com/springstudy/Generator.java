@@ -43,7 +43,7 @@ public class Generator {
         autoGenerator.setPackageInfo(packageConfig);
         // 策略配置
         StrategyConfig strategyConfig = new StrategyConfig();
-        strategyConfig.setInclude("operation_promotion");
+        strategyConfig.setInclude("store_user_address");
         // strategyConfig.setTablePrefix("tb_");
         strategyConfig.setRestControllerStyle(true);
         strategyConfig.setEntityLombokModel(true);
