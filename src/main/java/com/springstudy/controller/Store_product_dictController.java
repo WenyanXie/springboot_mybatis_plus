@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- * 交易订单统计表 前端控制器
+ * 商品分类表 前端控制器
  * </p>
  *
  * @author xiewenyan
- * @since 2022-10-17
+ * @since 2023-07-13
  */
 @RestController
-@RequestMapping("/trade_order")
-public class Trade_orderController {
+@RequestMapping("/store_product_dictDO")
+public class Store_product_dictController {
 
 }
 

@@ -10,54 +10,44 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 运营推广统计表
+ * 商品分类表
  * </p>
  *
  * @author xiewenyan
- * @since 2023-06-06
+ * @since 2023-07-13
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("operation_promotion")
-public class Operation_promotionDO implements Serializable {
+@TableName("store_product_dict")
+public class Store_product_dictDO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * id
+     * 分类id
      */
     @TableId(value = "id", type = IdType.ASSIGN_ID)
     private Long id;
 
     /**
-     * 注册用户id
+     * 名称
      */
-    private Long register_user_id;
+    private String name;
 
     /**
-     * 注册用户名称
+     * code
      */
-    private String register_user_name;
+    private String code;
 
     /**
-     * 注册用户手机号
+     * 父id（1级父id为0）
      */
-    private String register_user_phone;
+    private Long parent_id;
 
     /**
-     * 推广人员名称
+     * 备注
      */
-    private String promotion_name;
-
-    /**
-     * 推广人员手机号
-     */
-    private String promotion_phone;
-
-    /**
-     * 创建时间
-     */
-    private LocalDateTime create_time;
+    private String remarks;
 
     /**
      * 创建人
@@ -65,14 +55,19 @@ public class Operation_promotionDO implements Serializable {
     private String create_by;
 
     /**
-     * 更新时间
+     * 创建时间
      */
-    private LocalDateTime update_time;
+    private LocalDateTime create_time;
 
     /**
      * 更新人
      */
     private String update_by;
+
+    /**
+     * 更新时间
+     */
+    private LocalDateTime update_time;
 
 
 }
