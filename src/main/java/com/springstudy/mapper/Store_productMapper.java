@@ -1,7 +1,8 @@
 package com.springstudy.mapper;
 
-import com.springstudy.domain.Store_productDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.springstudy.domain.Store_productDO;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author xiewenyan
  * @since 2023-07-19
  */
+@Mapper
 public interface Store_productMapper extends BaseMapper<Store_productDO> {
 
 }

@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
 import com.baomidou.mybatisplus.generator.config.GlobalConfig;
 import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.StrategyConfig;
+import com.baomidou.mybatisplus.generator.config.rules.DateType;
+import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 
 /**
  * @Description:
@@ -34,6 +36,7 @@ public class Generator {
         globalConfig.setServiceImplName("%sRepositoryImpl");
         // globalConfig.setMapperName("%sDao");
         globalConfig.setIdType(IdType.ASSIGN_ID);
+        globalConfig.setDateType(DateType.ONLY_DATE);// 定义生成的实体类中日期类型
         autoGenerator.setGlobalConfig(globalConfig);
         //包相关配置
         PackageConfig packageConfig = new PackageConfig();
@@ -43,7 +46,10 @@ public class Generator {
         autoGenerator.setPackageInfo(packageConfig);
         // 策略配置
         StrategyConfig strategyConfig = new StrategyConfig();
-        strategyConfig.setInclude("store_product");
+        strategyConfig.setInclude("order_appraise");
+
+        strategyConfig.setNaming(NamingStrategy.underline_to_camel);//数据定位到定位到定位到定位到定位到定位到定位到定位到定位到定位到定位NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
+
         // strategyConfig.setTablePrefix("tb_");
         strategyConfig.setRestControllerStyle(true);
         strategyConfig.setEntityLombokModel(true);
@@ -53,12 +59,5 @@ public class Generator {
 
         autoGenerator.execute();
         System.out.println("hello");
-        System.out.println("hello dev");
-        System.out.println("hello master");
-        System.out.println("hello dev 2");
-        System.out.println("hello push");
-        System.out.println("hello pull");
-        System.out.println("hello push");
-        System.out.println("Gitee pull");
     }
 }

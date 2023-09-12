@@ -1,7 +1,8 @@
 package com.springstudy.mapper;
 
-import com.springstudy.domain.Sys_ad_pageDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.springstudy.domain.Sys_ad_pageDO;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author xiewenyan
  * @since 2023-07-18
  */
+@Mapper
 public interface Sys_ad_pageMapper extends BaseMapper<Sys_ad_pageDO> {
 
 }
