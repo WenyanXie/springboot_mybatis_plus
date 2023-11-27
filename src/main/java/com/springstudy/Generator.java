@@ -46,9 +46,9 @@ public class Generator {
         autoGenerator.setPackageInfo(packageConfig);
         // 策略配置
         StrategyConfig strategyConfig = new StrategyConfig();
-        strategyConfig.setInclude("order_appraise");
+        strategyConfig.setInclude("comm_relation_value");
 
-        strategyConfig.setNaming(NamingStrategy.underline_to_camel);//数据定位到定位到定位到定位到定位到定位到定位到定位到定位到定位到定位NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
+        strategyConfig.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
 
         // strategyConfig.setTablePrefix("tb_");
         strategyConfig.setRestControllerStyle(true);
