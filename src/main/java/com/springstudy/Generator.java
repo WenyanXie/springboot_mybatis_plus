@@ -46,7 +46,7 @@ public class Generator {
         autoGenerator.setPackageInfo(packageConfig);
         // 策略配置
         StrategyConfig strategyConfig = new StrategyConfig();
-        strategyConfig.setInclude("expert_service");
+        strategyConfig.setInclude("sys_user_bound");
 
         strategyConfig.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
 
