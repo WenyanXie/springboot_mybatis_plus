@@ -46,14 +46,15 @@ public class Generator {
         autoGenerator.setPackageInfo(packageConfig);
         // 策略配置
         StrategyConfig strategyConfig = new StrategyConfig();
-        strategyConfig.setInclude("sys_user_bound");
+        strategyConfig.setInclude("sys_company_inquire");
 
         strategyConfig.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
 
         // strategyConfig.setTablePrefix("tb_");
         strategyConfig.setRestControllerStyle(true);
         strategyConfig.setEntityLombokModel(true);
-        // strategyConfig.setLogicDeleteFieldName("deleted");
+        // 配置删除逻辑
+        strategyConfig.setLogicDeleteFieldName("isDeleted");
         // strategyConfig.setVersionFieldName("version");
         autoGenerator.setStrategy(strategyConfig);
 
