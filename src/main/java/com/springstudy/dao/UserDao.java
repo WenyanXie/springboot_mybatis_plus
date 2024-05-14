@@ -1,4 +1,4 @@
-package com.springstudy.Dao;
+package com.springstudy.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.springstudy.domain.User;

@@ -3,7 +3,7 @@ package com.springstudy;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.springstudy.Dao.UserDao;
+import com.springstudy.dao.UserDao;
 import com.springstudy.domain.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,7 +73,7 @@ class SpringbootMybatisPlusApplicationTests {
 
     @Test
     void testArray() {
-        List<String> a = new ArrayList<String>();
+        List<String> a = new ArrayList<>();
         a.add("1");
         a.add("2");
         Iterator<String> it = a.iterator();
